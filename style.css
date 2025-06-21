@@ -1,0 +1,154 @@
+/* General styling */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Joke container */
+#joke-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  min-height: 100px;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+#setup {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#punchline {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Buttons */
+.btn-group {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  margin: 0 10px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3b2e;
+}
+
+/* Favorites container */
+#favorites-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.favorite-joke {
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}
+
+.favorite-joke:last-child {
+  border-bottom: none;
+}
+
+/* Theme toggle switch */
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark #joke-container,
+body.dark #favorites-container {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+}
+
+body.dark button {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+body.dark button:hover {
+  background-color: #9a67ea;
+}
